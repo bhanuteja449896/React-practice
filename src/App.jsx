@@ -11,6 +11,8 @@ import UseReducerMain from './practice/useReducer/UseReducerMain'
 import UseCallbackMain from './practice/useCallback/UseCallbackMain'
 import UseMemoMain from './practice/useMemo/UseMemoMain'
 
+import TasksMain from './Tasks/TasksMain'
+
 
 function App() {
 
@@ -25,7 +27,11 @@ function App() {
       {/* <ThemeButton/> */}
       {/* <UseReducerMain/> */}
       {/* <UseCallbackMain/> */}
-      <UseMemoMain/>
+      {/* <UseMemoMain/> */}
+
+
+      <TasksMain/>
+
     </>
   )
 }
