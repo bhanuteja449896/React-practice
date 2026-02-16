@@ -1,13 +1,25 @@
 import Counter from './Beginner/Task1/Counter'
 import Parent from './Beginner/Task2/Parent'
 import Toggle from './Beginner/Task3/Toggle'
+import SimpleList from './Beginner/Task4/SimpleList'
+import Parent1 from './Beginner/Task5/Parent1'
+
+import TodoList from './Intermediate/Task1/TodoList'
 
 export default function TasksMain(){
     return(
         <>
+            {/* Beginner Tasks */}
             {/* <Counter/> */}
             {/* <Parent/> */}
-            <Toggle/>
+            {/* <Toggle/> */}
+            {/* <SimpleList/> */}
+            {/* <Parent1/> */}
+
+            {/* Intermediate Tasks  */}
+            <TodoList/>
+
+
         </>
     )
 }
