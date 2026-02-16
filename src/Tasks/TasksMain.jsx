@@ -6,7 +6,7 @@ import Parent1 from './Beginner/Task5/Parent1'
 
 import TodoList from './Intermediate/Task1/TodoList'
 import FormValidator from './Intermediate/Task2/FormValidator'
-
+import HomePage from './Intermediate/Task3/HomePage'
 export default function TasksMain(){
     return(
         <>
@@ -19,7 +19,8 @@ export default function TasksMain(){
 
             {/* Intermediate Tasks  */}
             {/* <TodoList/> */}
-            <FormValidator/>
+            {/* <FormValidator/> */}
+            <HomePage/>
 
         </>
     )
