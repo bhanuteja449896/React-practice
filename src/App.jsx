@@ -10,6 +10,7 @@ import ThemeButton from './practice/useContext/Task2/ThemeButton'
 import UseReducerMain from './practice/useReducer/UseReducerMain'
 import UseCallbackMain from './practice/useCallback/UseCallbackMain'
 import UseMemoMain from './practice/useMemo/UseMemoMain'
+import UserFetch from './practice/fetch/UserFetch'
 
 import TasksMain from './Tasks/TasksMain'
 
@@ -28,6 +29,7 @@ function App() {
       {/* <UseReducerMain/> */}
       {/* <UseCallbackMain/> */}
       {/* <UseMemoMain/> */}
+      {/* <UserFetch/> */}
 
 
       <TasksMain/>

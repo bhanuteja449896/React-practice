@@ -7,6 +7,11 @@ import Parent1 from './Beginner/Task5/Parent1'
 import TodoList from './Intermediate/Task1/TodoList'
 import FormValidator from './Intermediate/Task2/FormValidator'
 import HomePage from './Intermediate/Task3/HomePage'
+import FetchUser from './Intermediate/Task4/FetchUser'
+import FruitSearch from './Intermediate/Task5/FruitSearch'
+
+import HomePage1 from './Advanced/Task1/HomePage'
+
 export default function TasksMain(){
     return(
         <>
@@ -20,7 +25,13 @@ export default function TasksMain(){
             {/* Intermediate Tasks  */}
             {/* <TodoList/> */}
             {/* <FormValidator/> */}
-            <HomePage/>
+            {/* <HomePage/> */}
+            {/* <FetchUser/> */}
+            {/* <FruitSearch/> */}
+
+            {/* Advanced Tasks  */}
+            <HomePage1/>
+
 
         </>
     )
