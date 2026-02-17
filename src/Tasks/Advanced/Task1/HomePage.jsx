@@ -1,34 +1,45 @@
-import { useState,useEffect,useCallback } from "react";
-import TabButton from "./TabButton";
-import Tabs from './Tabs'
 
-export default function HomePage(){
 
-    const tabs = ['Home','About','Contact'];
+import { useState, useEffect, useCallback } from "react";
+import Tabs from "./Tabs";
+import TabPanel from "./TabPanel";
 
-    const [activeTab,setActiveTab] = useState(0);
+export default function App() {
 
-    useEffect(()=>{
-        const savedTab = localStorage.getItem('activeTab');
-        if(savedTab !== null){
-            setActiveTab(Number(savedTab));
+    const [activeTab, setActiveTab] = useState(0);
+
+    // load saved tab
+    useEffect(() => {
+        const saved = localStorage.getItem("activeTab");
+        if (saved !== null) {
+            setActiveTab(Number(saved));
         }
-    },[])
+    }, []);
 
-    useEffect(()=>{
-        localStorage.setItem('activeTab',activeTab)
-    },[activeTab]);
+    // save tab
+    useEffect(() => {
+        localStorage.setItem("activeTab", activeTab);
+    }, [activeTab]);
 
-    const handleTabClick = useCallback=(index)=>{
+    // memoized handler
+    const handleTabClick = useCallback((index) => {
         setActiveTab(index);
-    }
+    }, []);
 
+    const tabs = ["Home", "About", "Contact"];
 
-    return(
-        <div>
+    return (
+        <div style={{ padding: "20px" }}>
             <h1>Tab Switcher</h1>
-            <Tabs tabs={tabs} activeTab={activeTab} onTabClick={handleTabClick}/>
-            <TabButton activeTab={activeTab}/>
+
+            <Tabs
+                tabs={tabs}
+                activeTab={activeTab}
+                onTabClick={handleTabClick}
+            />
+
+            <TabPanel activeTab={activeTab} />
+
         </div>
-    )
+    );
 }
